@@ -34,6 +34,13 @@ Visit [SQL Try Editor at W3Schools.com](https://www.w3schools.com/Sql/tryit.asp?
 
   SELECT orders.orderId AS OrdersID, customers.customerName AS Customers , employees.LastName as Employees FROM orders JOIN customers ON orders.customerId = customers.customerId JOIN employees ON orders.employeeId = employees.employeeId ORDER BY employees;
 
+  --Displays CategoryName and a new column called Count that shows how many products are in each category. Shows 9 records.
+  SELECT COUNT(categoryName) FROM Categories;
+
+--Display OrderID and a column called ItemCount that shows the total number of products placed on the order. Shows 196 records.
+
+SElECT Count(OrderID) as ItemCount FROM Orders;
+
 ### Database Methods
 
 Write helpers methods in `./schemes/scheme-model.js` that match the following specifications:
